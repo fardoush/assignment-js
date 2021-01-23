@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- assignment 1 -->
+    <!-- একটা ফাংশন তৈরি করতে হবে যেখানে আমি যদি কোন ইন্টিজার নাম্বার আর্গুমেন্ট হিসেবে পাস করি সেটা আমাকে ইঞ্চি থেকে ফিট এ কনভার্ট করে দিবে। এবার ইঞ্চি থেকে ফিট এ কনভার্ট করার ফাংশনটাকে আমরা আরেক ফাংশনের আর্গুমেন্ট হিসেবে পাস করবো এবং আমাদের কাজ হবে ফিট থেকে মাইলে কনভার্ট করা। এজন্য আরেকটা ফাংশন তৈরি করতে হবে এবং এখান থেকে আউটপুট আমাদের মাইলে কনভার্ট করে দেখাবে। -->
+
+    <p>
+        <label>Inche</label>
+        <input id="inputFeet" type="number" placeholder="Inch" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+    </p>
+    <p>Feet: <span id="outputFeet"></span></p>
+
+    <p>
+        <label>Feet</label>
+        <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter2(this.value)" onchange="LengthConverter2(this.value)">
+    </p>
+
+    <p>Miles: <span id="outputMiles"></span></p>
+
+
+    <script>
+        // ৫. বাইরে প্রচন্ড বৃষ্টি। আপনি এখন চিন্তা করছেন অফিসে যাবেন নাকি যাবেন না। যদি অফিসে যান, তাহলে ছাতা নিয়ে বের হবেন আর যদি অফিসে নাহ্ যান তাহলে অফিসে একটা মেইল করে দিবেন যে আপনার শরীর খারাপ। এখন যদি অফিসে না জান, তাহলে বাসায় খিচুড়ি রান্না করবেন। বাসায় যদি গরুর মাংস থেকে তাহলে একটু গরুর মাংসও রান্না করে নিবেন খিচুড়ির সাথে নাহলে ডিম ভাজি দিয়ে খেয়ে ফেলবেন। এখন এই পুরো সিনারিও চিন্তা করে একটা জাভাস্ক্রিপ্ট প্রোগ্রাম লিখে ফেলেন।
+
+
+
+        let office_a_gele = true;
+        let chata_niye_ber_hobo = true;
+        let mail_sick = true;
+        let khuchiru = true;
+        let gorur_mansho = true;
+        let office_aNa_gele = true;
+        let dim_vagi = true;
+
+        if (office_a_gele != chata_niye_ber_hobo) {
+            console.log('Going to office');
+        } else if (office_aNa_gele && mail_sick) {
+            if ((khuchiru && gorur_mansho) || (khuchiru && dim_vagi)) {
+
+            }
+
+            console.log('Not going to office');
+        }
+
+
+
+
+
+        // ৪. তোমার সবগুলো ফ্রেন্ডের নাম দিয়ে একটা অ্যারে তৈরি করো। এখন একটা ফাংশন বানাতে হবে যেই ফাংশনের কাজ হবে তোমার ফ্রেন্ডের নামগুলোর মধ্য থেকে যার নাম সবথেকে ছোট, তাকে আউটপুট হিসেবে দেখানো। (বুঝতেই পারছো এখানে ফাংশনের আরগুমেন্ট হিসেবে আমাদের একটা অ্যারে পাস করতে হবে বাকি সব ক্যাল্কুলেশন ফাংশনের ভিতরেই হবে)
+        let frnd_list = ['Sharmin', 'Jesmin', 'Sherin', 'Payel', 'Baby', 'Zoha'];
+        console.log(myArrayMin(frnd_list));
+
+        function myArrayMin(arr) {
+            var len = arr.length;
+            var min = Infinity;
+            while (len--) {
+                if (arr[len] < min) {
+                    min = arr[len];
+                }
+            }
+            return min;
+        }
+
+
+
+
+        //  1. একটা ফাংশন তৈরি করতে হবে যেখানে আমি যদি কোন ইন্টিজার নাম্বার আর্গুমেন্ট হিসেবে পাস করি সেটা আমাকে ইঞ্চি থেকে ফিট এ কনভার্ট করে দিবে। এবার ইঞ্চি থেকে ফিট এ কনভার্ট করার ফাংশনটাকে আমরা আরেক ফাংশনের আর্গুমেন্ট হিসেবে পাস করবো এবং আমাদের কাজ হবে ফিট থেকে মাইলে কনভার্ট করা। এজন্য আরেকটা ফাংশন তৈরি করতে হবে এবং এখান থেকে আউটপুট আমাদের মাইলে কনভার্ট করে দেখাবে।
+
+        function LengthConverter(valNum) {
+            document.getElementById("outputFeet").innerHTML = valNum / 12;
+        }
+
+        function LengthConverter2(valNum2) {
+            document.getElementById("outputMiles").innerHTML = valNum2 * 0.00018939;
+        }
+    </script>
+</body>
+
+</html>
